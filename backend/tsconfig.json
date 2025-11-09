@@ -1,44 +1,37 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    /* === File Paths === */
+    "rootDir": "./src",
+    "outDir": "./dist",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    /* === Module Settings === */
+    "module": "commonjs", // 👈 use "commonjs" for Node.js (safer with Express & Jest)
+    "target": "es2020", // supports async/await and modern syntax
+    "lib": ["es2020"], // modern JavaScript APIs
+    "moduleResolution": "node", // resolve imports like Node
 
-    // Other Outputs
+    /* === Type Definitions === */
+    "types": ["node", "jest"], // 👈 add Node & Jest types
+    "esModuleInterop": true, // allows `import express from "express"`
+    "resolveJsonModule": true, // import JSON files safely
+
+    /* === Output === */
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
 
-    // Stricter Typechecking Options
+    /* === Strict Type Checking === */
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+
+    /* === Optional Nice-to-Haves === */
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["src", "src/tests"],
+  "exclude": ["node_modules", "dist"]
 }

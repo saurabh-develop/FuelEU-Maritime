@@ -1,9 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev --respawn src/adapters/inbound/http/server.ts",
+    "build": "tsc",
+    "test": "jest",
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "ts-node prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
