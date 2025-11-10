@@ -3,7 +3,7 @@ import { api } from "../../infrastructure/apiClient";
 import type { Route } from "../../../domain/models";
 import RouteTable from "../components/RouteTable";
 
-export default function RoutesPage() {
+export default function xRoutesPage() {
   const [routes, setRoutes] = useState<Route[]>([]);
 
   const load = async () => {

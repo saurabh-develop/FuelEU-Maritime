@@ -2,7 +2,7 @@ import axios from "axios";
 import type { Route } from "../../domain/models";
 
 const client = axios.create({
-  baseURL: "/api",
+  baseURL: "http://localhost:4000",
 });
 
 export const api = {

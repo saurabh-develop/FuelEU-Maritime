@@ -6,8 +6,8 @@
 
     /* === Module Settings === */
     "module": "commonjs", // 👈 use "commonjs" for Node.js (safer with Express & Jest)
-    "target": "es2020", // supports async/await and modern syntax
-    "lib": ["es2020"], // modern JavaScript APIs
+    "target": "ES2020", // supports async/await and modern syntax
+    "lib": ["ES2020"], // modern JavaScript APIs
     "moduleResolution": "node", // resolve imports like Node
 
     /* === Type Definitions === */
