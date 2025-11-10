@@ -1,4 +1,3 @@
-// src/adapters/ui/pages/PoolingPage.tsx
 import { useState } from "react";
 import { api } from "../../infrastructure/apiClient";
 

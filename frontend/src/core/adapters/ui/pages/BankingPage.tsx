@@ -1,4 +1,3 @@
-// src/adapters/ui/pages/BankingPage.tsx
 import { useState, useEffect } from "react";
 import { api } from "../../infrastructure/apiClient";
 
