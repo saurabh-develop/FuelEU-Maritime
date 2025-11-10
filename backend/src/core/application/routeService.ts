@@ -21,11 +21,14 @@ export class RouteService {
     if (!baseline) throw new Error("No baseline route set");
 
     const others = await this.routeRepo.getNonBaseline();
-    return others.map((r) => ({
+
+    const comparison = others.map((r) => ({
       ...r,
       percentDiff: (r.ghgIntensity / baseline.ghgIntensity - 1) * 100,
       compliant: r.ghgIntensity <= TARGET_INTENSITY,
     }));
+
+    return { baseline, comparison };
   }
 
   async computeCB(routeId: string) {

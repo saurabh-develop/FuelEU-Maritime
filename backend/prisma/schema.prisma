@@ -20,3 +20,20 @@ model Route {
   isBaseline        Boolean @default(false)
   createdAt         DateTime @default(now())
 }
+
+model BankingRecord {
+  id        Int      @id @default(autoincrement())
+  shipId    String
+  year      Int
+  amount    Float
+  type      String   // 'BANK' or 'APPLY'
+  createdAt DateTime @default(now())
+}
+
+model Pool {
+  id        Int      @id @default(autoincrement())
+  year      Int
+  members   Json     // [{ shipId, cb_before, cb_after }]
+  sumCB     Float
+  createdAt DateTime @default(now())
+}
