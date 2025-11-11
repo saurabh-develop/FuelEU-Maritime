@@ -19,7 +19,7 @@ export default function App() {
           <button
             key={t}
             onClick={() => setTab(t)}
-            className={`px-4 py-2 rounded-lg shadow ${
+            className={`px-4 py-2 rounded-lg shadow cursor-pointer ${
               tab === t ? "bg-blue-600 text-white" : "bg-gray-200"
             }`}
           >
