@@ -119,3 +119,9 @@ POST /banking/bank
   "amount": 42.5
 }
 ```
+
+## 🖼️ Screenshots
+
+| Routes Tab                                                                | Compare Tab                                                                | Banking Tab                                                                | Pooling Tab                                                                |
+| ------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| ![routes](https://ik.imagekit.io/kcekezhkm/1.png?updatedAt=1762833335901) | ![compare](https://ik.imagekit.io/kcekezhkm/2.png?updatedAt=1762833335883) | ![banking](https://ik.imagekit.io/kcekezhkm/3.png?updatedAt=1762833335827) | ![pooling](https://ik.imagekit.io/kcekezhkm/4.png?updatedAt=1762833335959) |
